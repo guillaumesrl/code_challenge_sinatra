@@ -1,0 +1,9 @@
+<p><%= @users %></p>
+
+<% @users.each_key do |name| %>
+  <ul>
+    <li><a href="/users/<%= name %>"> <%= name %></a></li>
+  </ul>
+<% end %>
+
+
