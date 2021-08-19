@@ -26,9 +26,9 @@ get "/users" do
 end
 
 get "/users/:name" do
-  @user = params[:name]
-  @email = @users[params[:name].to_sym][:email]
-  @interests = @users[params[:name].to_sym][:interests]
+  @user = params[:name].to_sym
+  @email = @users[@user][:email]
+  @interests = @users[@user][:interests]
   @other_users = other_users
   erb :user_page
 end
